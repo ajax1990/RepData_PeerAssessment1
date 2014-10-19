@@ -290,12 +290,9 @@ activity2$daytype &lt;- as.factor(week_end)
 <p>Panel plot For Weekend/Weekday</p>
 
 <pre><code class="r">par(mfrow = c(2, 1))
-
-weekdays_data &lt;- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == 
-        &quot;Weekday&quot;, FUN = mean)
+weekdays_data &lt;- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == &quot;Weekday&quot;, FUN = mean)
 plot(weekdays_data, type = &quot;l&quot;, main = &quot;Weekday&quot;)
-weekends_data &lt;- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == 
-        &quot;Weekend&quot;, FUN = mean)
+weekends_data &lt;- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == &quot;Weekend&quot;, FUN = mean)
 plot(weekends_data, type = &quot;l&quot;, main = &quot;Weekends&quot;)
 </code></pre>
 

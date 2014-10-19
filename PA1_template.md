@@ -135,12 +135,9 @@ Panel plot For Weekend/Weekday
 
 ```r
 par(mfrow = c(2, 1))
-
-weekdays_data <- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == 
-        "Weekday", FUN = mean)
+weekdays_data <- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == "Weekday", FUN = mean)
 plot(weekdays_data, type = "l", main = "Weekday")
-weekends_data <- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == 
-        "Weekend", FUN = mean)
+weekends_data <- aggregate(steps ~ interval, data = activity2, subset = activity2$daytype == "Weekend", FUN = mean)
 plot(weekends_data, type = "l", main = "Weekends")
 ```
 
